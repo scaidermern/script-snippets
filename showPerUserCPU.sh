@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# print total CPU usage of each user logged ini
+# print total CPU usage of each user logged in
 #
 # to sort by CPU usage, pipe the output to 'sort -k2 -nr'
 #
