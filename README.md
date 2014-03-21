@@ -8,6 +8,7 @@ handy snippets of various scripts, including:
 * `listLargeDirs.sh`: recursively list all directories sorted by their content size
 * `listLargeFiles.sh`: recursively list all files sorted by their size
 * `osd_mpd.sh`: small 'daemon' to show the currently playing mpd song as on-screen display
+* `showAllPerUserCPU.sh`: print the *total* CPU usage in percent of *all* available users
 * `showPerUserCPU.sh`: print the *total* CPU usage in percent of each user logged in
 * `showPerUserMem.sh`: print the *total* memory usage in percent of each user logged in
 
