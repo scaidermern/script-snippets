@@ -16,6 +16,8 @@ do
     # spawning many processes will increase our CPU usage significantly
     if [ "$USER" = "$OWN" ]; then continue; fi
     (top -b -n 1 -u "$USER" | awk -v user=$USER 'NR>7 { sum += $9; } END { if (sum > 0.0) print user, sum; }') &
+    # don't spawn too many processes in parallel
+    sleep 0.05
 done
 wait
 
