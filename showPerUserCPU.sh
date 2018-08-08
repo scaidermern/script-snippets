@@ -2,6 +2,10 @@
 #
 # print total CPU usage in percent of currently logged in users.
 #
+# 1st column: user
+# 2nd column: aggregated CPU usage
+# 3rd column: normalized CPU usage according to the number of cores
+#
 # to sort by CPU usage, pipe the output to 'sort -k2 -nr'
 #
 

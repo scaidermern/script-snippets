@@ -2,7 +2,10 @@
 #
 # print total memory usage in percent of each user logged in
 #
-# to sort by CPU usage, pipe the output to 'sort -k2 -nr'
+# 1st column: user
+# 2nd column: memory usage
+#
+# to sort by memory usage, pipe the output to 'sort -k2 -nr'
 #
 
 set -e

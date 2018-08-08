@@ -3,6 +3,10 @@
 # print total CPU usage in percent of all available users
 # but skips the ones with a CPU usage of zero
 #
+# 1st column: user
+# 2nd column: aggregated CPU usage
+# 3rd column: normalized CPU usage according to the number of cores
+#
 # to sort by CPU usage, pipe the output to 'sort -k2 -nr'
 #
 
