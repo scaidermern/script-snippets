@@ -8,18 +8,18 @@
 
 set -e
 
-OWN=$(id -nu)
+own=$(id -nu)
 
-for USER in $(getent passwd | awk -F ":" '{print $1}' | sort -u)
+for user in $(getent passwd | awk -F ":" '{print $1}' | sort -u)
 do
     # print other user's CPU usage in parallel but skip own one because
     # spawning many processes will increase our CPU usage significantly
-    if [ "$USER" = "$OWN" ]; then continue; fi
-    (top -b -n 1 -u "$USER" | awk -v user=$USER 'NR>7 { sum += $9; } END { if (sum > 0.0) print user, sum; }') &
+    if [ "$user" = "$own" ]; then continue; fi
+    (top -b -n 1 -u "$user" | awk -v user=$user 'NR>7 { sum += $9; } END { if (sum > 0.0) print user, sum; }') &
     # don't spawn too many processes in parallel
     sleep 0.05
 done
 wait
 
 # print own CPU usage after all spawned processes completed
-top -b -n 1 -u "$OWN" | awk -v user=$OWN 'NR>7 { sum += $9; } END { print user, sum; }'
+top -b -n 1 -u "$own" | awk -v user=$own 'NR>7 { sum += $9; } END { print user, sum; }'
