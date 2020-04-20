@@ -23,6 +23,7 @@
 /home/*/.josm/plugins/wmsplugin/cache/*
 /home/*/.josm/plugins/Mapillary/cache/*
 /home/*/.kodi/userdata/Thumbnails/*
+/home/*/Library/Logs/Homebrew/*
 /home/*/.lgp/postal2/Save/*
 /home/*/.local/share/Colossal*Order/Cities_Skylines/Saves/*
 /home/*/.local/share/Aspyr/*/cache/*
@@ -45,7 +46,7 @@
 /home/*/.wesnoth/saves/*
 /home/*/.xbmc/userdata/Thumbnails/*
 /home/*/.xmoto/LCache/
-/home/*/.xmoto/Levels/downloaded/"
+/home/*/.xmoto/Levels/downloaded/*
 /home/*/Dropbox/*
 /home/*/backup/*
 /home/*/images/*.img
