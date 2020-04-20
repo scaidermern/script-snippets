@@ -53,16 +53,16 @@ date="$(date +%Y-%m-%d)"
 file_base="backup-$(hostname)-$date"
 file_home="${file_base}-home.$tar_ext"
 echo "creating user backup $file_home"
-echo time tar $tar_opts "$file_home" --exclude-from="$excl_home" /home/ /root/ 2>"${file_base}-home.log"
+time tar $tar_opts "$file_home" --exclude-from="$excl_home" /home/ /root/ 2>"${file_base}-home.log"
 echo
 if ! [ $full_backup ]; then
     file_sys="${file_base}-sys.$tar_ext"
     echo "creating system backup $file_sys"
-    echo time tar $tar_opts "$file_sys" --exclude-from="$excl_sys" /etc/ /var/spool/ /var/www/ 2>"${file_base}-sys.log"
+    time tar $tar_opts "$file_sys" --exclude-from="$excl_sys" /etc/ /var/spool/ /var/www/ 2>"${file_base}-sys.log"
 else
     file_sys="${file_base}-sys-full.$tar_ext"
     echo "creating full system backup $file_sys"
-    echo time tar $tar_opts "$file_sys" --exclude-from="$excl_sys" / 2>"${file_base}-sys.log"
+    time tar $tar_opts "$file_sys" --exclude-from="$excl_sys" / 2>"${file_base}-sys.log"
 fi
 
 echo
