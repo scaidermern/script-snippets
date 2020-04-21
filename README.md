@@ -15,5 +15,5 @@ Handy snippets of various scripts, including:
 
 License
 -------
-[CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/)
+[MIT](https://opensource.org/licenses/mit-license.php)
 (c) [Alexander Heinlein](mailto:alexander.heinlein@web.de)
