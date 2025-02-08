@@ -6,6 +6,7 @@ Handy snippets of various scripts, including:
 * `backup.sh`: create user and (full) system backups. make sure to check the list of excludes beforehand.
 * `checkFlashStorage.sh`: check health of USB flash drive, SD card or other (flash) storage.
 * `diffArchive.sh`: show the diff of two archive contents.
+* `gpxMerge.py`: merge multiple GPX files into a single file.
 * `listLargeDebPackages.sh`: list all installed debian packages sorted by their size.
 * `listLargeDirs.sh`: recursively list all directories sorted by their content size.
 * `listLargeFiles.sh`: recursively list all files sorted by their size.
