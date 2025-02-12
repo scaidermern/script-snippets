@@ -9,7 +9,7 @@ from dataclasses import dataclass
 
 @dataclass
 class GpxMerge:
-    """ Merger for multiple GPX files
+    """Merger for multiple GPX files
 
     Attributes:
         title (str): Title of the GPX file
@@ -20,6 +20,8 @@ class GpxMerge:
     combine: bool = False
 
     def add_header(self, out):
+        """Add GPX header"""
+
         out.write('<?xml version="1.0" encoding="UTF-8"?>\n')
         out.write('<gpx\n')
         out.write(' xmlns="http://www.topografix.com/GPX/1/1"\n')
@@ -36,6 +38,7 @@ class GpxMerge:
             out.write('  <trkseg>\n')
 
     def add_footer(self, out):
+        """Add GPX trailer"""
         if self.combine:
             # <trk> and <trkseg> sections
             out.write('  </trkseg>\n')
@@ -44,6 +47,8 @@ class GpxMerge:
         out.write('</gpx>\n')
 
     def parse_file(self, out, file):
+        """Parse given GPX file and write data to given output file"""
+
         print(f'Merging {file}')
         doDump = False
         with open(file, 'r') as infile:
@@ -67,7 +72,9 @@ class GpxMerge:
                 if doDump and not skipLine:
                     out.write(line)
 
-    def merge(self, outfile, files):
+    def run(self, outfile, files):
+        """Perform all the magic"""
+
         with open(outfile, 'w', encoding='utf-8') as out:
             self.add_header(out)
             for file in files:
@@ -87,7 +94,9 @@ def main() -> int:
     args = parser.parse_args()
     
     merger = GpxMerge(args.title, args.combine)
-    merger.merge(args.outfile, args.files)
+    merger.run(args.outfile, args.files)
+
+    return 0
 
 if __name__ == '__main__':
     sys.exit(main())
