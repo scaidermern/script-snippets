@@ -18,6 +18,7 @@
 /home/*/.icedove/*/ImapMail/*
 /home/*/.java/deployment/cache/*
 /home/*/.josm/cache/*
+/home/*/.rustup
 /home/*/.josm/geoimage-thumbnails/cache/*
 /home/*/.josm/imagery/cache/*
 /home/*/.josm/plugins/wmsplugin/cache/*
@@ -48,6 +49,7 @@
 /home/*/.xmoto/LCache/
 /home/*/.xmoto/Levels/downloaded/*
 /home/*/Dropbox/*
+/home/*/Pictures/*
 /home/*/backup/*
 /home/*/images/*.img
 /home/*/images/*.iso
