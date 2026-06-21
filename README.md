@@ -10,6 +10,8 @@ Handy snippets of various scripts, including:
 * `listLargeDebPackages.sh`: list all installed debian packages sorted by their size.
 * `listLargeDirs.sh`: recursively list all directories sorted by their content size.
 * `listLargeFiles.sh`: recursively list all files sorted by their size.
+* `listNewestFilesCreated.sh`: recursively list all files sorted by their creation (birth) time
+* `listNewestFilesModified.sh`:  recursively list all files sorted by their last data modification time
 * `osd_mpd.sh`: small 'daemon' to show the currently playing mpd song as on-screen display.
 * `photo_rename_exif_date.py`: Rename photos based on their EXIF time stamps
 * `showAllPerUserCPU.sh`: print the *total* CPU usage in percent of *all* available users.
